@@ -18,6 +18,15 @@ nav a {
     padding: 8px;
     margin-bottom: 8px;
 }
+@media(min-width: 450px){
+    .layout{ display: grid;
+    grid-template-rows: 3rem auto 4rem 3rem;
+    grid-template-columns: auto to auto;
+    grid-template-areas: 
+    'head head head'
+    'nav nav nav'
+    'div div div';
+}}
 
 
 
