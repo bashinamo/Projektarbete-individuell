@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quire.css">
+    <title>Quire Beta</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#link1">Notebook</a>
+        <a href="#link1">Notebook</a>
+    </nav>
+
+
+
+    <h1>Anteckningsbok</h1>
+    <br>
+    <button onclick="tillämpaFormatering('bold')">Fetstil</button>
+    <button onclick="tillämpaFormatering('italic')">Kursiv</button>
+    <button onclick="tillämpaFormatering('underline')">Understruken</button>
+    <button onclick="tillämpaFormatering('insertUnorderedList')">Punktlista</button>
+    <button onclick="tillämpaFormatering('insertOrderedList')">Numrerad lista</button>
+    <button onclick="tillämpaFormatering('formatBlock', 'h2')">Rubrik 2</button>
+    <button onclick= " " id="favoriteButton"></button>
+
+
+    <div id="editor" contenteditable="true" style="min-height: 100px;"></div>
+    <button onclick="läggTillAnteckning()">Lägg till anteckning</button>
+
+    <ul id="noteList"></ul>
+    
+
+    <script src="quire.js"></script>
+</body>
+</html>

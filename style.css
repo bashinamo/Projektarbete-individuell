@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+main{
+     display: flex;
+     height: 100%;
+}
+#sidebar {
+    width: 16%;
+    background-color: #000000;
+    padding: 23px;
+    height: 100%;
+    color: aliceblue;
+    font-size: 19px;
+
+}
+.link-container a {
+    display: block;
+    transition: 0.3s; 
+    text-decoration: none;
+    text-align: center;
+    margin: 26px;
+}
+
+#note-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #eee;
+    height: 100%;
+    width: 25%;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.note{
+    position: relative;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background: #ddd;
+    border: solid 1px #aaa;
+    cursor: pointer;
+}
+.note > p{
+    pointer-events: none;
+}
+.favorite{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    filter: saturate(0%);
+}
+.isFavorite{
+    filter: saturate(100%);
+}
+
+#viewNotes{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+#viewNotes > h1{
+    padding: 50px;
+    border-radius: 15px;
+    border: solid 1px #aaa;
+}
+#leta{
+    font-size: 29px;
+    display: flex;
+    justify-content: center;
+}
+#star{
+    font-size: 29px;
+    display: flex;
+    justify-content: center;
+}
+#setting{
+    font-size: 29px;
+    display: flex;
+    justify-content: center;
+}
+@media(min-width: 450px){
+    .layout{ display: grid;
+    grid-template-rows: 3rem auto 4rem 3rem;
+    grid-template-columns: auto to auto;
+    grid-template-areas: 
+    'head head head'
+    'main main main'
+    'div div div'
+    'sidebar sidebar sidebar';}}
