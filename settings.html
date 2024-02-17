@@ -15,27 +15,23 @@
             <p>Ditt huvudinnehåll här.</p>
             
             <div class="link-container" >
-                <a href="index.html">Home</a>
-                <a href="Quire.html">Create Note</a>
-                <a href="Google.html">Google Analytics</a>
-
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <a href="Quire.html"><i class="fas fa-plus-circle"></i></a>
+                <a href="Google.html"><i class="fas fa-chart-bar"></i></a>
+                <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="favorite.html"><i class="fa-regular fa-star"></i></a>
+                <a href="#"><i class="fa-solid fa-gear selectedNav"></i></a>
             </div> 
-               <br>
-               <br>
-               <i  id="leta" class="fa-solid fa-magnifying-glass"></i>
-               <br>
-               <br>
-               <i id="star" class="fa-regular fa-star"></i>
-               <br>
-               <br>
-               <i id="setting" class="fa-solid fa-gear" onclick=""></i>
-
         </div>
 
         <div id="note-list"></div>
-        <button id="darkMode">Dark mode</button>
+
+        <div id="viewNotes">
+            <button id="darkMode">Dark mode</button>
+        </div>
     </main>
 
+    <script src="mutualFanctions.js"></script>
     <script>
         const darkMode = document.getElementById('darkMode');
 

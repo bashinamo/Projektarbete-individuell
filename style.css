@@ -11,6 +11,18 @@ main{
      display: flex;
      height: 100%;
 }
+i{
+    color: #fff;
+    font-size: 30px;
+    padding: 20px;
+    margin: 10px 0;
+}
+i:hover{
+    background: #b92cff3e;
+}
+.selectedNav{
+    background: #b92cff3e;
+}
 #sidebar {
     width: 16%;
     background-color: #000000;
@@ -25,7 +37,6 @@ main{
     transition: 0.3s; 
     text-decoration: none;
     text-align: center;
-    margin: 26px;
 }
 
 #note-list{
@@ -91,6 +102,13 @@ main{
 .dark-mode{
     background: black;
     color: white;
+}
+#searchText{
+    padding: 15px;
+    width: 50%;
+    border: solid 1px #aaa;
+    border-radius: 20px;
+    text-align: center;
 }
 @media(min-width: 450px){
     .layout{ display: grid;
