@@ -32,7 +32,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: #eee;
+    background: #ffffff27;
     height: 100%;
     width: 25%;
     padding: 20px;
@@ -42,7 +42,7 @@ main{
     position: relative;
     padding: 20px 40px;
     border-radius: 15px;
-    background: #ddd;
+    background: #ffffff31;
     border: solid 1px #aaa;
     cursor: pointer;
 }
@@ -55,10 +55,11 @@ main{
     right: 0;
     padding: 10px;
     cursor: pointer;
-    filter: saturate(0%);
+    user-select: none;
+    filter: saturate(0%) brightness(50%);
 }
-.isFavorite{
-    filter: saturate(100%);
+.favoriteOn{
+    filter: saturate(100%) brightness(100%);
 }
 
 #viewNotes{
@@ -86,6 +87,10 @@ main{
     font-size: 29px;
     display: flex;
     justify-content: center;
+}
+.dark-mode{
+    background: black;
+    color: white;
 }
 @media(min-width: 450px){
     .layout{ display: grid;

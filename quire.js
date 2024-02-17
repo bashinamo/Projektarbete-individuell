@@ -23,18 +23,6 @@
     const favoriteButton = document.getElementById('favoriteButton');
     favoriteButton.innerHTML = "&#9734;"; 
 
-favoriteButton.onclick = function () {
-    nyAnteckning.classList.toggle("favorite");
-    uppdateraFavorit(anteckning.text);
-};
-
-nyAnteckning.appendChild(favoriteButton);
-lista.appendChild(nyAnteckning);
-
-// Uppdatera favoritklassen baserat på sparad information
-if (anteckning.favorite) {
-    nyAnteckning.classList.add("favorite");
-}
 
 
 // Uppdatera favoritinformation i lokal lagring

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Favorite</title>
+</head>
+<body>
+    <main>
+        <div id="sidebar">
+            <h2>Huvudinnehåll</h2>
+            <p>Ditt huvudinnehåll här.</p>
+            
+            <div class="link-container" >
+                <a href="index.html">Home</a>
+                <a href="Quire.html">Create Note</a>
+                <a href="Google.html">Google Analytics</a>
+                <a href="#link3">Länk 3</a>
+            </div> 
+               <br>
+               <br>
+               <i  id="leta" class="fa-solid fa-magnifying-glass"></i>
+               <br>
+               <br>
+               <i id="star" class="fa-regular fa-star"></i>
+               <br>
+               <br>
+               <i id="setting" class="fa-solid fa-gear" onclick="location.href='settings.html'"></i>
+
+        </div>
+
+        <div id="note-list"></div>
+
+        <div id="viewNotes">
+            <h1 id="noteText">Note text</h1>
+        </div>
+    </main>
+
+
+
+
+    <script>
+        const noteListIndex = document.getElementById('note-list');
+        let lcl = JSON.parse(localStorage.getItem('favoriteNotes'));
+        let noteArray = [];
+
+        if(lcl)
+        noteArray = lcl;
+
+        noteArray.forEach(note => {
+            createNotes(note);
+        });
+
+        function createNotes(note){
+            let div = document.createElement('div');
+            div.className = 'note';
+                let p = document.createElement('p');
+                p.innerHTML = note.text;
+            div.appendChild(p);
+                let star = document.createElement('h3');
+                star.className = 'favorite favoriteOn';
+                star.innerHTML = '⭐';
+            div.appendChild(star);
+            noteListIndex.appendChild(div);
+        }
+
+        // Dark mode local storage
+        if(localStorage.darkMode != undefined){
+            if(localStorage.darkMode == 'true'){
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+    </script>
+</body>
+</html>

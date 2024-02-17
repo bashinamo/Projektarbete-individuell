@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="settings.css">
+    <title>Settings</title>
+</head>
+<body>
+    <main>
+        <div id="sidebar">
+            <h2>Huvudinnehåll</h2>
+            <p>Ditt huvudinnehåll här.</p>
+            
+            <div class="link-container" >
+                <a href="index.html">Home</a>
+                <a href="Quire.html">Create Note</a>
+                <a href="Google.html">Google Analytics</a>
+
+            </div> 
+               <br>
+               <br>
+               <i  id="leta" class="fa-solid fa-magnifying-glass"></i>
+               <br>
+               <br>
+               <i id="star" class="fa-regular fa-star"></i>
+               <br>
+               <br>
+               <i id="setting" class="fa-solid fa-gear" onclick=""></i>
+
+        </div>
+
+        <div id="note-list"></div>
+        <button id="darkMode">Dark mode</button>
+    </main>
+
+    <script>
+        const darkMode = document.getElementById('darkMode');
+
+        if(localStorage.darkMode != undefined){
+            darkMode.clicked = localStorage.darkMode;
+            if(localStorage.darkMode == 'true'){
+                document.body.classList.add('dark-mode');
+                darkMode.innerHTML = 'Dark Mode: On';
+            } else {
+                document.body.classList.remove('dark-mode');
+                darkMode.innerHTML = 'Dark Mode: Off';
+            }
+        }
+        else
+        darkMode.clicked = 'false';
+
+        darkMode.onclick = function(){
+            if (darkMode.clicked == 'false') {
+                document.body.classList.add('dark-mode');
+                darkMode.clicked = 'true';
+                localStorage.darkMode = 'true';
+                darkMode.innerHTML = 'Dark Mode: On';
+            } else {
+                document.body.classList.remove('dark-mode');
+                darkMode.clicked = 'false';
+                localStorage.darkMode = 'false';
+                darkMode.innerHTML = 'Dark Mode: Off';
+            }
+        }
+    </script>
+</body>
+</html>
