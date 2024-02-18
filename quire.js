@@ -19,9 +19,7 @@
   function tillämpaFormatering(kommando, värde) {
     document.execCommand(kommando, false, värde);
   }
-// Lägg till favoritknapp
-    const favoriteButton = document.getElementById('favoriteButton');
-    favoriteButton.innerHTML = "&#9734;"; 
+
 
 
 
